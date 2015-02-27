@@ -1,0 +1,10 @@
+<div class="contain-to-grid">
+  <div data-magellan-expedition="fixed">
+    <dl class="sub-nav">
+      <dt>{{ site.title }}</dt>
+      {% for section in site.sections %}
+        <dd data-magellan-arrival="{{ section | remove: ' ' | downcase }}"><a href="#{{ section | remove: ' ' | downcase }}">{{ section }} </a></dd>
+      {% endfor %}
+    </dl>
+  </div>
+</div>

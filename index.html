@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<div>
+
+{% for section in site.sections %}
+  <div class="row" id="{{ section | remove: ' ' | downcase }}">
+    {% include {{ section | remove: ' ' | downcase | append: '.html' }}%}
+  </div>
+{% endfor %}
+
+</div>
